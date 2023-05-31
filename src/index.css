@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    -webkit-app-region: drag;
+  }
+
+  .nav_item{
+    -webkit-app-region: no-drag
+  }
