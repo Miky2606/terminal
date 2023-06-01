@@ -1,4 +1,4 @@
-import { INavBarButton, button_nav } from "./nav.interface"
+import { INavBarButton, button_nav } from "../services/nav.interface"
 
 export const NavButton = ()=>{
     return <div className="flex gap-3 items-center">

@@ -1,0 +1,6 @@
+{
+    "shorcut":[{
+        "short": "hh",
+        "execute": "echo hola"
+    }]
+}

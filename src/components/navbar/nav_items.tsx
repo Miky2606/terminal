@@ -1,4 +1,4 @@
-import { INavBarItem, items } from "./nav.interface"
+import { INavBarItem, items } from "../services/nav.interface"
 
 export const NavBarList = ()=>{
 return    <ul className=" w-[90%] h-full flex gap-2" >

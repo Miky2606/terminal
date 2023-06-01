@@ -1,15 +1,15 @@
 
 import { create } from "zustand"
-import { IShorcut } from "../src/shortcut/shorcut.interface"
+
 
  type CommandType = "success" | "error"
 
 export interface ICommand{
-    shorcut:IShorcut[]
+    
     command:ResponseCommand[],
     newCommand:(code:ResponseCommand)=> void
     clear: ()=>void,
-    shorcuts:(shortcut:IShorcut) =>  void
+   
 }
 
 
@@ -21,7 +21,7 @@ export interface ResponseCommand{
 }
 
 export const useCommand = create<ICommand>((set) => ({
-    shorcut:[],
+
     command:[],
     newCommand: (code: ResponseCommand) => {
         set((state) => ({
@@ -30,8 +30,7 @@ export const useCommand = create<ICommand>((set) => ({
       clear: () => {
         set((_) => ({
          command: []}));
-      },
-      shorcuts: (shorcut) => 
-        shorcut.action
-      ,
+      }
+      
+   
 }))

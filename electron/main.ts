@@ -25,6 +25,7 @@ function createWindow() {
     minWidth:940,
     minHeight:560,
     frame:false,
+  
     icon: path.join(process.env.PUBLIC, 'electron-vite.svg'),
     
     webPreferences: {
@@ -39,12 +40,14 @@ function createWindow() {
     win?.webContents.send('main-process-message', (new Date).toLocaleString())
   })
 
+  win.webContents.openDevTools()
 
 
   if (VITE_DEV_SERVER_URL) {
     win.loadURL(VITE_DEV_SERVER_URL)
   } else {
     // win.loadFile('dist/index.html')
+  
     win.loadFile(path.join(process.env.DIST, 'index.html'))
   }
 }
@@ -73,17 +76,7 @@ app.on('window-all-closed', () => {
 
 
 app.whenReady().then(() => {
-  // Register a 'CommandOrControl+X' shortcut listener.
-  const ret = globalShortcut.register('CommandOrControl+W', () => {
-    alert("Hola")
-  })
 
-  if (!ret) {
-    console.log('registration failed')
-  }
-
-  // Check whether a shortcut is registered.
-  console.log(globalShortcut.isRegistered('CommandOrControl+X'))
   createWindow()
 })
 

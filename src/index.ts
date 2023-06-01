@@ -7,7 +7,7 @@ import { ResponseCommand } from "../store/barcommand.store";
 export const hola = async( code:string): Promise<ResponseCommand>=>{
    try {
     
-    const x = await execSync(code,  {'shell':'powershell.exe'})
+    const x = await execSync(code)
      return {id:crypto.randomUUID(),type:'success',message:x.toString(), command:code}
    } catch (error:any ) {
     
@@ -22,6 +22,3 @@ export const hola = async( code:string): Promise<ResponseCommand>=>{
       
 }
 
-window.console.log = (e)=>{
-   console.log(e, "new")
-}
