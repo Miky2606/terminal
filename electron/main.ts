@@ -25,7 +25,7 @@ function createWindow() {
     minWidth:940,
     minHeight:560,
     frame:false,
-  
+    vibrancy:'ultra-dark',
     icon: path.join(process.env.PUBLIC, 'electron-vite.svg'),
     
     webPreferences: {

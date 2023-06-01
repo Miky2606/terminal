@@ -2,7 +2,8 @@ import { IconType } from "react-icons";
 import { AiOutlineMinus, AiOutlineSetting } from "react-icons/ai";
 import {FiSquare} from "react-icons/fi"
 import {RxCross1} from 'react-icons/rx'
-import { getFunction, getUrl } from "./nav.services";
+import { getFunction } from "./nav.service";
+
 
 
 export enum ActionNav{
@@ -16,7 +17,8 @@ export enum ActionNav{
 export interface INavBarButton{
   Icon: IconType,
   onClick? : ()=> void
-  title:string
+  title:string,
+  url?:string
 }
 
 export interface INavBarItem{
@@ -36,7 +38,8 @@ export const items:INavBarItem[] = [
 export const button_nav : INavBarButton[]=[
     {
         Icon:AiOutlineSetting,
-        title:"Settings"
+        title:"Settings",
+        url : "/settings"
         
     },{
     Icon: AiOutlineMinus,

@@ -1,6 +1,15 @@
 {
-    "shorcut":[{
-        "short": "hh",
-        "execute": "echo hola"
-    }]
+  "shorcut": [
+    {
+    "short": "hh",
+    "execute": "echo hola"
+  }, {
+    "short": "ls",
+    "execute": "dir"
+   
+  },{
+    "short":"bb",
+    "execute":"npm run"
+    }
+  ]
 }

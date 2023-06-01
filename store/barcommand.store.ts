@@ -5,7 +5,6 @@ import { create } from "zustand"
  type CommandType = "success" | "error"
 
 export interface ICommand{
-    
     command:ResponseCommand[],
     newCommand:(code:ResponseCommand)=> void
     clear: ()=>void,
@@ -17,7 +16,8 @@ export interface ResponseCommand{
     type:CommandType,
     message:string,
     command:string,
-    id:string
+    id:string,
+    date:Date
 }
 
 export const useCommand = create<ICommand>((set) => ({
